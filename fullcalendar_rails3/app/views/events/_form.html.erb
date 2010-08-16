@@ -1,0 +1,41 @@
+<%= form_for(@event, :html => {:class => "ajaxForm"}) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :startDate %><br />
+    <%= f.date_select :startDate %>
+  </div>
+  <div class="field">
+    <%= f.label :endDate %><br />
+    <%= f.date_select :endDate %>
+  </div>
+  <div class="field">
+    <%= f.label :startTime %><br />
+    <%= f.time_select :startTime %>
+  </div>
+  <div class="field">
+    <%= f.label :endTime %><br />
+    <%= f.time_select :endTime %>
+  </div>
+  <div class="field">
+    <%= f.label :supporter_id %><br />
+    <%= f.text_field :supporter_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

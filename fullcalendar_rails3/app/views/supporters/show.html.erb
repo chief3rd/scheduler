@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @supporter.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @supporter.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @supporter.phone %>
+</p>
+
+<p>
+  <b>Isit:</b>
+  <%= @supporter.isIT %>
+</p>
+
+
+<%= link_to 'Edit', edit_supporter_path(@supporter) %> |
+<%= link_to 'Back', supporters_path %>

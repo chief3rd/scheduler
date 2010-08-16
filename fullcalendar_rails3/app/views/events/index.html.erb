@@ -1,0 +1,49 @@
+<h1>Listing events</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Startdate</th>
+    <th>Enddate</th>
+    <th>Starttime</th>
+    <th>Endtime</th>
+    <th>Supporter</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @events.each do |event| %>
+  <tr>
+    <td><%= event.name %></td>
+    <td><%= event.startDate %></td>
+    <td><%= event.endDate %></td>
+    <td><%= event.startTime %></td>
+    <td><%= event.endTime %></td>
+    <td><%= event.supporter_id %></td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Event', new_event_path, :remote => true %> 
+<hr/>
+<div id ="calendar"></div>
+<div id = "desc_dialog" style ="display:none;">
+  <div id = "event_desc">
+  </div>
+  <br/>
+  <br/>
+  <div id = "event_actions">
+    <span id = "edit_event"></span>
+    <span id = "delete_event"></span>
+  </div>
+</div>
+<div id = "create_event_dialog" style ="display:none;">
+  <div id = "create_event">
+  </div>
+</div>

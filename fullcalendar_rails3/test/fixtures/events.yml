@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  startDate: 2010-08-14
+  endDate: 2010-08-14
+  startTime: 2010-08-14 13:10:35
+  endTime: 2010-08-14 13:10:35
+  supporter_id: 1
+
+two:
+  name: MyString
+  startDate: 2010-08-14
+  endDate: 2010-08-14
+  startTime: 2010-08-14 13:10:35
+  endTime: 2010-08-14 13:10:35
+  supporter_id: 1
